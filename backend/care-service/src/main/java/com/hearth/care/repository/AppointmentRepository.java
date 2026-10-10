@@ -1,6 +1,6 @@
-package com.hearth.care.infrastructure.repository;
+package com.hearth.care.repository;
 
-import com.hearth.care.domain.Appointment;
+import com.hearth.care.entity.Appointment;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -18,6 +18,4 @@ public interface AppointmentRepository extends JpaRepository<Appointment, UUID> 
 
     /** Visits the whole family can see: the only ones that ever enter the family map. */
     List<Appointment> findByFamilyIdAndVisibilityOrderByStartAtAsc(UUID familyId, String visibility);
-
-    List<Appointment> findByForId(UUID forId);
 }

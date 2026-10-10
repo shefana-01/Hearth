@@ -47,6 +47,12 @@ public record FamilyContext(
         }
     }
 
+    /** Whether this member has been granted access to family documents. */
+    @JsonIgnore
+    public boolean canSeeDocuments() {
+        return documentsAccess;
+    }
+
     public ZoneId zone() {
         try {
             return timezone == null || timezone.isBlank() ? ZoneOffset.UTC : ZoneId.of(timezone);
