@@ -3,7 +3,7 @@ package com.hearth.care;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.hearth.common", "com.hearth.care"})
 public class CareServiceApplication {
 
     public static void main(String[] args) {

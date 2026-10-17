@@ -1,6 +1,14 @@
 version: '3.8'
 
 services:
+  frontend:
+    build:
+      context: ./frontend
+    container_name: hearth-frontend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
   # Primary Database Engine (hosts logical DBs: hearth_family, hearth_task, hearth_decision, hearth_care, hearth_notification)
   postgres:
     image: postgres:16-alpine
