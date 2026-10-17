@@ -161,6 +161,17 @@ Hearth/
 
 ## Getting started
 
+### Run with Docker
+
+Prerequisite: Docker Desktop with Docker Compose.
+
+```bash
+docker compose up --build -d
+```
+
+Open [http://localhost:3000](http://localhost:3000). This starts the frontend in demo
+mode alongside PostgreSQL and Redis. Stop the containers with `docker compose down`.
+
 ### Run the app (demo mode, no backend needed)
 
 Prerequisite: Node.js 18.18 or newer, with npm.
